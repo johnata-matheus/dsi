@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  db:
+    image: mysql:latest
+    container_name: mysql-dsi
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - mysql-dsi:/var/lib/mysql
+    ports:
+      - "3310:3306"
+
+volumes:
+  mysql-dsi:
